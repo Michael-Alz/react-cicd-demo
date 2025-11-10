@@ -1,0 +1,9 @@
+# dependencies
+node_modules/
+
+# production build artifacts
+dist/
+
+# misc
+.DS_Store
+*.log
