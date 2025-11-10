@@ -21,6 +21,18 @@ describe('App Component', () => {
     const count = screen.getByText(/Click count: 1/i)
     expect(count).toBeInTheDocument()
   })
+  test('decrement button decreases count', () => {
+     render(<App />)
+     const incrementButton = screen.getByText(/Increment/i)
+     const decrementButton = screen.getByText(/Decrement/i)
+     
+     fireEvent.click(incrementButton)
+     fireEvent.click(incrementButton)
+     fireEvent.click(decrementButton)
+     
+     const count = screen.getByText(/Click count: 1/i)
+     expect(count).toBeInTheDocument()
+   })
 
   test('reset button sets count to 0', () => {
     render(<App />)
